@@ -1,0 +1,51 @@
+# Composer dependencies
+/vendor/
+/composer.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# PHP-specific
+*.log
+*.cache
+*.session
+
+# Temporary files and caches
+*.tmp
+*.bak
+*.old
+
+# Logs
+*.log
+
+# Windows-specific
+Thumbs.db
+*.DS_Store
+*.lnk
+desktop.ini
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IDE-specific files
+.idea/
+
+# Node.js dependencies (якщо використовуються фронтенд-бібліотеки)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Coverage reports
+coverage/
+
+# Build and generated files
+/build/
+/dist/
+/public/assets/
+
+# Custom local configuration
+*.local.php
+*.config.php
