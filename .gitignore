@@ -49,3 +49,5 @@ coverage/
 # Custom local configuration
 *.local.php
 *.config.php
+
+/config/db.php
