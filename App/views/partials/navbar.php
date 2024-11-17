@@ -5,7 +5,7 @@
             <a href="/">Workopia</a>
         </h1>
         <nav class="space-x-4">
-            <a href="login.html" class="text-white hover:underline">Login</a>
+            <a href="/auth/login" class="text-white hover:underline">Login</a>
             <a href="register.html" class="text-white hover:underline">Register</a>
             <a
                 href="/listings/create"

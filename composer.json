@@ -1,0 +1,16 @@
+{
+    "name": "wozniak456/workopia",
+    "description": "Job listing application",
+    "authors": [
+        {
+            "name": "Sofiia Vozniak",
+            "email": "voznyakson@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}

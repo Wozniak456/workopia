@@ -1,14 +1,16 @@
 <?php
 
 /**
- * Get the base path
+ * Get the base path. 
+ * Отримати абсолютний шлях до ФАЙЛУ. 
+ * Використовується просто для того, щоб не писати ../../../
  * 
  * @param string $path
  * @return string
  */
-
 function basePath($path = '')
 {
+    //__DIR__ дозволяє отримати абсолютний шлях до КАТАЛОГУ
     return __DIR__ . '/' . $path;
 }
 
@@ -20,9 +22,10 @@ function basePath($path = '')
  * @return void
  * 
  */
-function loadView($name)
+function loadView($name, $data = [])
 {
-    $viewPath = basePath("views/{$name}.view.php");
+    extract($data);
+    $viewPath = basePath("App/views/{$name}.view.php");
 
     if (file_exists($viewPath)) {
         require $viewPath;
@@ -40,11 +43,11 @@ function loadView($name)
  */
 function loadPartial($name)
 {
-    $partialPath = basePath("views/partials/{$name}.php");
+    $partialPath = basePath("App/views/partials/{$name}.php");
     if (file_exists($partialPath)) {
         require $partialPath;
     } else {
-        echo "View '{$name} not found!'";
+        echo "Partial '{$name} not found!'";
     }
 }
 
@@ -75,4 +78,16 @@ function inspectAndDie($value)
     var_dump($value);
     echo '</pre>';
     die();
+}
+
+
+/**
+ * format salary
+ * 
+ * @param string $salary
+ * @return string formatted salary
+ */
+function formatSalary($salary)
+{
+    return '$' . number_format($salary);
 }
